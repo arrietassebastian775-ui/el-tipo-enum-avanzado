@@ -1,18 +1,25 @@
 package com.example;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.stream.Stream;
+
 public class App {
     public static void main(String[] args) {
     	
-    	/*El enum tiene un metodo que se llama values, que permite iterar a travez de las constantes del enum
-    	 * y mostrar el ordinal asiciado a dicha constante el nombre de tipo String de la propia constante*/
+    	// Frecuencia de visitantes al zoo en SPRING
     	
-    	// primero utilizando sentencia for mejorado
+    	System.out.println("Frecuencia de visitantes al Zoo en primavera");
+    	Season.SPRING.printExpectedVisitors();
     	
-    	for (Season season : Season.values()) {
-    		System.out.println("Nombre de la constante: " + season.name() + ", ordinal: " + season.ordinal());
+    	System.out.println("Frecuencia de visitantes al Zoo en verano");
+    	Season.SUMMER.printExpectedVisitors();
+    	
+    	// Horario de visitas al Zoo en verano
+    	
+    	System.out.println("El horario de visitas al Zoo en verano es: " + Season.SUMMER.getHours());
+    	
+    		
     	}
-    	
-    	// segundo utilizando operaciones de agregado
-
     }
-}
+
